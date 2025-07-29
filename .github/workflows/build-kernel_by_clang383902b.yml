@@ -59,7 +59,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
-        git clone https://github.com/tomxi1997/Toolchain.git clang-aosp --depth=1
+        git clone https://gitlab.com/Jprimero15/aosp-clang-18.0.0 clang-aosp --depth=1
+        #git clone https://github.com/tomxi1997/Toolchain.git clang-aosp --depth=1
           
         
 
