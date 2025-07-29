@@ -73,7 +73,10 @@ jobs:
       if: env.BUILD_BOOT_IMG == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        wget -O boot-source.img ${{ env.SOURCE_BOOT_IMAGE }}
+        wget https://raw.githubusercontent.com/tomxi1997/KernelSU-Next-Action/op7t/boot/boot.img.xz
+        tar -xf *.xz
+        mv boot.img boot-source.img
+        #wget -O boot-source.img ${{ env.SOURCE_BOOT_IMAGE }}
         if [ -f boot-source.img ]; then
             echo "HAVE_SOURCE_BOOT_IMAGE=true" >> $GITHUB_ENV
         fi
